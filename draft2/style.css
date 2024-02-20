@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --caramel: #ad8b73;
+  --latte: #ceab93;
+  --butter: #e3caa5;
+  --vanilla: #fffbe9;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.header {
+  height: 85px;
+  background: var(--caramel);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  color: var(--vanilla);
+}
+
+.header .left {
+  font-size: 2.5em;
+  font-weight: 200;
+}
+
+.right {
+  display: flex;
+  height: 100%;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  top: 0;
+  text-decoration: none;
+  color: var(--vanilla);
+  font-size: 1.2em;
+  transition: top 0.2s, transform 0.2s;
+}
+
+.nav-link:hover {
+  top: -2px;
+  cursor: pointer;
+}
+
+.nav-item::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 68%;
+  height: 1px;
+  background: var(--vanilla);
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.nav-item.active-link::before {
+  opacity: 1;
+  width: 100%;
+}
+
+.nav-item.active-link:hover::before {
+  transform: translate(-50%, -200%);
+  width: 90%;
+}
+
+.container {
+  height: calc(100vh - 85px);
+  border: 2px solid red;
+  display: flex;
+}
+
+.side-nav {
+  border: 1px solid green;
+  width: 320px;
+  overflow-y: scroll;
+}
+
+.main {
+  flex: 1 0 0;
+  border: 1px solid blue;
+  overflow-y: scroll;
+}
