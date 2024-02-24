@@ -193,7 +193,15 @@ body {
 .main {
   overflow-y: scroll;
   height: calc(100vh - 80px);
-  padding: 10px;
   background: var(--alabaster);
   color: var(--linen);
+  display: flex;
+  flex-direction: column;
+}
+
+.main-section {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 200px;
+  border: 2px solid black;
 }
