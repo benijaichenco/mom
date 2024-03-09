@@ -17,6 +17,7 @@ body {
   margin: 0;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 .header {
@@ -202,8 +203,12 @@ body {
   margin-bottom: 20px;
 }
 
+.top-filler {
+  height: 80px;
+  width: 100%;
+}
+
 .main {
-  margin-top: 80px;
   overflow-y: scroll;
   height: calc(100vh - 80px);
   background: var(--alabaster);
@@ -215,6 +220,6 @@ body {
 section {
   flex-grow: 0;
   flex-shrink: 0;
-  height: calc(100vh - 80px);
+  height: 100%;
   border: 2px solid black;
 }
