@@ -15,7 +15,9 @@ function toggleNavAndScroll(event) {
   event.preventDefault();
   const sectionId = event.target.getAttribute("href").toString();
   console.log(sectionId);
-  document.querySelector(sectionId).scrollIntoView({ behavior: "smooth" });
+  document
+    .querySelector(sectionId)
+    .scrollIntoView({ behavior: "smooth", block: "end" });
 }
 
 function toggleProjectsNav() {
