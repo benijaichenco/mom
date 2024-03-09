@@ -206,6 +206,7 @@ body {
 
 .main {
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   height: calc(100vh - 80px);
   background: var(--alabaster);
   color: var(--linen);
