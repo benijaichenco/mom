@@ -21,7 +21,8 @@ body {
 }
 
 .header {
-  position: fixed;
+  position: sticky;
+  position: -webkit-sticky;
   top: 0;
   left: 0;
   display: flex;
@@ -201,12 +202,6 @@ body {
 }
 .projects-nav .project:last-child {
   margin-bottom: 20px;
-}
-
-.top-filler {
-  height: 80px;
-  background: transparent;
-  width: 100%;
 }
 
 .main {
