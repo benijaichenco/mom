@@ -10,18 +10,21 @@ function toggleNav() {
   overlay.classList.toggle("active");
 }
 
+function toggleNavAndScroll(event) {
+  toggleNav();
+  event.preventDefault();
+  const sectionId = event.target.getAttribute("href").toString();
+  console.log(sectionId);
+  document.querySelector(sectionId).scrollIntoView({ behavior: "smooth" });
+}
+
 function toggleProjectsNav() {
   navProjectsTitle.classList.toggle("active");
   projectsNav.classList.toggle("active");
 }
-
-navBtn.addEventListener("click", toggleNav);
 
 overlay.addEventListener("click", function () {
   if (navBtn.classList.contains("active")) {
     toggleNav();
   }
 });
-
-const projectsBtn = document.querySelector(".nav-link.projects .link-title");
-projectsBtn.addEventListener("click", toggleProjectsNav);

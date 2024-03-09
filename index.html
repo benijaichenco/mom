@@ -11,10 +11,15 @@
 
     <div class="nav-menu">
       <div class="nav-link home">
-        <div class="link-title">Home</div>
+        <a
+          href="#home-section"
+          class="link-title"
+          onclick="toggleNavAndScroll(event)"
+          >Home</a
+        >
       </div>
       <div class="nav-link projects">
-        <div class="link-title">Programs</div>
+        <div class="link-title" onclick="toggleProjectsNav()">Programs</div>
         <div class="projects-nav">
           <div class="project">Program 1</div>
           <div class="project">Program 2</div>
@@ -27,25 +32,35 @@
         </div>
       </div>
       <div class="nav-link about">
-        <div class="link-title">About</div>
+        <a
+          href="#about-section"
+          class="link-title"
+          onclick="toggleNavAndScroll(event)"
+          >About</a
+        >
       </div>
       <div class="nav-link contact">
-        <div class="link-title">Contact</div>
+        <a
+          href="#contact-section"
+          class="link-title"
+          onclick="toggleNavAndScroll(event)"
+          >Contact</a
+        >
       </div>
     </div>
 
     <div class="header">
       <h2>Graciela</h2>
-      <button class="nav-btn">
+      <button class="nav-btn" onclick="toggleNav()">
         <div class="bar"></div>
       </button>
     </div>
 
     <div class="main">
-      <section class="main-section"></section>
-      <section class="main-section"></section>
-      <section class="main-section"></section>
-      <section class="main-section"></section>
+      <section id="home-section">Home section</section>
+      <section id="projects-section">Projects section</section>
+      <section id="about-section">About section</section>
+      <section id="contact-section">Contact section</section>
     </div>
   </body>
 </html>
