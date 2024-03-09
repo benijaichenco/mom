@@ -15,11 +15,7 @@ function toggleNavAndScroll(event) {
   event.preventDefault();
   const sectionId = event.target.getAttribute("href").toString();
   console.log(sectionId);
-  seamless.scrollIntoView(document.querySelector(sectionId), {
-    behavior: "smooth",
-    block: "center",
-    inline: "center",
-  });
+  document.querySelector(sectionId).scrollIntoView({ behavior: "smooth" });
 }
 
 function toggleProjectsNav() {
