@@ -1,13 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 :root {
   --alabaster: rgb(255, 249, 242);
   --linen: rgb(207, 185, 157);
+  --title-font: "Playfair Display", serif;
+  --text-font: "Montserrat", sans-serif;
 }
 
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--text-font);
   box-sizing: border-box;
+  font-feature-settings: "liga" 1;
 }
 
 body {
@@ -210,13 +213,46 @@ body {
   height: calc(100vh - 80px);
   background: var(--alabaster);
   color: var(--linen);
-  display: flex;
-  flex-direction: column;
 }
 
 section {
   flex-grow: 0;
   flex-shrink: 0;
-  height: 100%;
-  border: 2px solid red;
+  height: 60vh;
+  overflow: hidden;
+  border: 2px solid green;
+}
+
+#home-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pfp-container {
+  width: 100%;
+}
+
+.pfp {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.home-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.home-title {
+  text-align: center;
+  font-family: var(--title-font);
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.home-subtext {
+  text-align: center;
 }
