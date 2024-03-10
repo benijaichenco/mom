@@ -208,6 +208,9 @@ body {
 }
 
 .main {
+  position: absolute;
+  top: 80px;
+  left: 0;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   height: calc(100vh - 80px);
@@ -220,7 +223,7 @@ section {
   flex-shrink: 0;
   height: 60vh;
   overflow: hidden;
-  border: 2px solid blue;
+  border: 2px solid red;
 }
 
 #home-section {
