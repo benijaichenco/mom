@@ -13,7 +13,7 @@ function toggleNav() {
 function toggleNavAndScroll(event) {
   toggleNav();
   event.preventDefault();
-  const sectionId = event.target.getAttribute("href").toString();
+  const sectionId = event.target.getAttribute("href");
   console.log(sectionId);
   document
     .querySelector(sectionId)
