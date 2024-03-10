@@ -3,6 +3,7 @@ const navMenu = document.querySelector(".nav-menu");
 const overlay = document.querySelector(".overlay");
 const navProjectsTitle = document.querySelector(".projects .link-title");
 const projectsNav = document.querySelector(".projects-nav");
+const main = document.querySelector(".main");
 
 function toggleNav() {
   navBtn.classList.toggle("active");
@@ -14,10 +15,9 @@ function toggleNavAndScroll(event) {
   toggleNav();
   event.preventDefault();
   const sectionId = event.target.getAttribute("href");
-  console.log(sectionId);
-  document
+  main
     .querySelector(sectionId)
-    .scrollIntoView({ behavior: "smooth", block: "nearest" });
+    .scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function toggleProjectsNav() {
