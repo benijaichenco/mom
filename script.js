@@ -17,7 +17,7 @@ function toggleNavAndScroll(event) {
   console.log(sectionId);
   document
     .querySelector(sectionId)
-    .scrollIntoView({ behavior: "smooth", block: "start" });
+    .scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
 function toggleProjectsNav() {
