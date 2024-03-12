@@ -10,41 +10,26 @@
 
     <div class="nav-menu">
       <div class="nav-link home">
-        <a
-          href="#home-section"
-          class="link-title"
-          onclick="toggleNavAndScroll(event)"
-          >Home</a
-        >
+        <a href="#home-section" class="link-title" onclick="toggleNavAndScroll(event)">Home</a>
       </div>
-      <div class="nav-link projects">
-        <div class="link-title" onclick="toggleProjectsNav()">Programs</div>
-        <div class="projects-nav">
-          <div class="project">Program 1</div>
-          <div class="project">Program 2</div>
-          <div class="project">Program 3</div>
-          <div class="project">Program 4</div>
-          <div class="project">Program 5</div>
-          <div class="project">Program 6</div>
-          <div class="project">Program 7</div>
-          <div class="project">Program 8</div>
+      <div class="nav-link program">
+        <a href="#programs-section" class="link-title" onclick="toggleNavAndScroll(event)">Programs</a><span class="programs-nav-down-arrow" onclick="toggleProjectsNav()"></span>
+        <div class="programs-nav">
+          <div class="program">Program 1</div>
+          <div class="program">Program 2</div>
+          <div class="program">Program 3</div>
+          <div class="program">Program 4</div>
+          <div class="program">Program 5</div>
+          <div class="program">Program 6</div>
+          <div class="program">Program 7</div>
+          <div class="program">Program 8</div>
         </div>
       </div>
       <div class="nav-link about">
-        <a
-          href="#about-section"
-          class="link-title"
-          onclick="toggleNavAndScroll(event)"
-          >About</a
-        >
+        <a href="#about-section" class="link-title" onclick="toggleNavAndScroll(event)">About</a>
       </div>
       <div class="nav-link contact">
-        <a
-          href="#contact-section"
-          class="link-title"
-          onclick="toggleNavAndScroll(event)"
-          >Contact</a
-        >
+        <a href="#contact-section" class="link-title" onclick="toggleNavAndScroll(event)">Contact</a>
       </div>
     </div>
 
@@ -55,23 +40,17 @@
       <div class="bar"></div>
     </button>
 
-    <div class="main">
+    <main>
       <section id="home-section">
-        <div class="pfp-container">
-          <img class="pfp" src="./images/mom.jpeg" alt="profile-picture" />
-        </div>
         <div class="home-text">
           <div class="home-title">Graciela Jaichenco</div>
-          <div class="home-subtext">
-            Mother of six, photographer, Dula, Anthropologist, Inhabitant of the
-            earth.
-          </div>
+          <div class="home-subtext">Mother of six, photographer, Dula, Anthropologist, Inhabitant of the earth.</div>
         </div>
       </section>
-      <section id="projects-section">Projects section</section>
+      <section id="programs-section">Program section</section>
       <section id="about-section">About section</section>
       <section id="contact-section">Contact section</section>
-    </div>
+    </main>
   </body>
   <script src="script.js"></script>
 </html>

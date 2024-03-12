@@ -1,9 +1,10 @@
 const navBtn = document.querySelector(".nav-btn");
 const navMenu = document.querySelector(".nav-menu");
 const overlay = document.querySelector(".overlay");
-const navProjectsTitle = document.querySelector(".projects .link-title");
-const projectsNav = document.querySelector(".projects-nav");
-const main = document.querySelector(".main");
+const navProgramsTitle = document.querySelector(".program .link-title");
+const programsNav = document.querySelector(".programs-nav");
+const programsNavArrow = document.querySelector(".programs-nav-down-arrow");
+const main = document.querySelector("main");
 
 function toggleNav() {
   navBtn.classList.toggle("active");
@@ -20,8 +21,9 @@ function toggleNavAndScroll(event) {
 }
 
 function toggleProjectsNav() {
-  navProjectsTitle.classList.toggle("active");
-  projectsNav.classList.toggle("active");
+  navProgramsTitle.classList.toggle("active");
+  programsNav.classList.toggle("active");
+  programsNavArrow.classList.toggle("active");
 }
 
 overlay.addEventListener("click", function () {

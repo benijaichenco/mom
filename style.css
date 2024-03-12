@@ -143,44 +143,47 @@ body {
 }
 
 .nav-link .link-title {
-  position: relative;
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: 600;
   color: rgb(143, 127, 106);
 }
 
-.nav-link.projects .link-title::before,
-.nav-link.projects .link-title::after {
+.programs-nav-down-arrow {
+  position: relative;
+  margin-left: 40px;
+}
+
+.programs-nav-down-arrow::before,
+.programs-nav-down-arrow::after {
   content: "";
   position: absolute;
-  height: 1px;
+  top: 40%;
+  height: 3px;
   width: 9px;
   border-radius: 2px;
-  border: 1px solid rgb(143, 127, 106);
   background: rgb(143, 127, 106);
-  top: 50%;
   transition: 0.2s;
 }
 
-.nav-link.projects .link-title::after {
-  transform: translateY(-50%) rotate(-45deg);
+.programs-nav-down-arrow::after {
+  transform: rotate(-45deg) translateY(-50%);
   right: 0px;
 }
 
-.nav-link.projects .link-title::before {
-  transform: translateY(-50%) rotate(45deg);
+.programs-nav-down-arrow::before {
+  transform: rotate(45deg) translateY(-50%);
   right: 6px;
 }
 
-.nav-link.projects .link-title.active::after {
+.programs-nav-down-arrow.active::after {
   transform: translateY(-50%) rotate(45deg);
 }
-.nav-link.projects .link-title.active::before {
+.programs-nav-down-arrow.active::before {
   transform: translateY(-50%) rotate(-45deg);
 }
 
-.projects-nav {
+.programs-nav {
   background: rgba(0, 0, 0, 0);
   height: 0;
   display: flex;
@@ -190,25 +193,25 @@ body {
   transition: height 0.3s;
 }
 
-.projects-nav.active {
+.programs-nav.active {
   height: 250px;
 }
 
-.projects-nav .project {
+.programs-nav .program {
   color: rgb(143, 127, 106);
   font-size: 1.3rem;
-  font-weight: 300;
+  font-weight: 500;
   padding: 0 12px;
 }
 
-.projects-nav .project:first-child {
+.programs-nav .program:first-child {
   margin-top: 20px;
 }
-.projects-nav .project:last-child {
+.programs-nav .program:last-child {
   margin-bottom: 20px;
 }
 
-.main {
+main {
   position: absolute;
   top: 80px;
   left: 0;
@@ -221,11 +224,13 @@ body {
   color: var(--linen);
 }
 
-section {
+main section {
   flex-grow: 0;
   flex-shrink: 0;
+  min-height: 430px;
   height: 60vh;
   height: 60dvh;
+  max-height: 500px;
   overflow: hidden;
   border: 2px solid red;
 }
@@ -234,15 +239,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.pfp-container {
-  width: 100%;
-}
-
-.pfp {
-  vertical-align: middle;
-  width: 100%;
 }
 
 .home-text {
